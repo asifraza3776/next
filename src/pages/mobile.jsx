@@ -12,7 +12,7 @@ const HomePage = () => {
     <div>
       <Navbar />
       <Navlist/>
-
+      <ProductList/>
 
     
     </div>
