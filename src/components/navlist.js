@@ -5,25 +5,28 @@ import React from 'react';
 
 const Navlist = ({ onSelectCategory }) => {
   return (
-    <nav className="bg-gray-800 p-4 ">
+    <nav className="bg-gray-800 p-4  flex justify-center">
       <ul className="flex space-x-4 text-white">
         <Link href="/mobile">
           Mobile
         </Link>
-        <li
-          className="cursor-pointer"
-          onClick={() => onSelectCategory('shoes')}
+        <Link href="/shoes"
+          className="flex space-x-4 text-white"
+          
         >
           Shoes
-        </li>
-        <li
-          className="cursor-pointer"
-          onClick={() => onSelectCategory('cloth')}
+        </Link>
+        <Link href="/cloths"
+          className="flex space-x-4 text-white"
         >
-          Cloth
-        </li>
+          Cloths
+        </Link>
+
+        
       </ul>
+
     </nav>
+
   );
 };
 

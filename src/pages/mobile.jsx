@@ -1,4 +1,4 @@
-// Importing a component from the Header directory
+
 
 import Card from "@/components/cards";
 import HeroSection from "@/components/cards";

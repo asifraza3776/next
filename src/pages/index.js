@@ -1,10 +1,13 @@
-// Importing a component from the Header directory
+
 
 import Card from "@/components/cards";
 import HeroSection from "@/components/cards";
 import Navbar from "@/components/navbar";
 import ProductList from "@/components/productlist";
 import Navlist from "@/components/navlist";
+import Link from 'next/link';
+
+
 
 
 const HomePage = () => {
@@ -12,6 +15,9 @@ const HomePage = () => {
     <div>
       <Navbar />
       <Navlist/>
+      {/* <ProductList/> */}
+
+    
 
 
     

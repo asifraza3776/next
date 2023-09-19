@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
-const Card = ({ product, onDelete }) => {
+
+const Card = ({ product, onDelete, onUpdate }) => {
+  const [showUpdateForm, setShowUpdateForm] = useState(false);
+
   const handleDeleteClick = () => {
-    onDelete(product.id); // Call the onDelete function with the product ID
+    onDelete(product.id);
+  };
+
+  const handleUpdateClick = () => {
+    setShowUpdateForm(true);
   };
 
   return (
@@ -10,23 +18,27 @@ const Card = ({ product, onDelete }) => {
       <img src={product.image} alt={product.name} />
       <h2>{product.name}</h2>
       <p>Price: {product.price}</p>
-      <p>Description: {product.desc}</p>
+      <p>Description: {product.description}</p>
       <div className="mt-2">
         <button
           className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mr-2"
-          onClick={handleDeleteClick} // Call handleDeleteClick when the button is clicked
+          onClick={handleDeleteClick}
         >
           Delete
         </button>
+        
 
-        <button
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-          onClick={() => onUpdate(product.id)} // Assuming onUpdate is a function that handles the update action
-        >
-          Update
-        </button>
+
+
+
+
       </div>
+
+      {/* {showUpdateForm && (
+        <UpdateForm product={product} onUpdate={onUpdate} />
+      )} */}
     </div>
+
   );
 };
 
